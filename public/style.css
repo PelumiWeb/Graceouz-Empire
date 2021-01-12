@@ -20,8 +20,6 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-size: inherit;
 }
 html {
   scroll-behavior: smooth;
@@ -45,7 +43,7 @@ body {
   /* transform: translate(-50%, -50%); */
   z-index: 10;
   /* color: #7f8fa6; */
-  color: #334e6f;
+  color: #042c5e;
   font-family: "Yeon Sung", cursive;
   font-size: 1.2rem;
   letter-spacing: 5px;
@@ -69,7 +67,11 @@ body {
   border-radius: 10px;
   font-family: var(--font-family-2);
   text-decoration: none;
-  background-color: #0c75ad;
+  background-color: #209cdf;
+}
+
+.intro_text h1 {
+  font-size: 1.2rem;
 }
 
 .get_started a:hover {
@@ -150,7 +152,7 @@ body {
   border-radius: 5px;
 }
 
-.logo > img {
+.logo a > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -199,7 +201,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: var(--background-color);
   color: var(--primary-color);
   display: flex;
@@ -226,6 +228,10 @@ body {
   display: block;
   margin: 10px;
   text-transform: uppercase;
+}
+
+.nav_services {
+  display: flex;
 }
 
 .image_box {
@@ -289,7 +295,7 @@ body {
 
 .dropdown {
   position: fixed;
-  right: 15%;
+  right: 16%;
   top: 12%;
   list-style: none;
   color: #fff;
@@ -304,11 +310,78 @@ body {
   cursor: pointer;
 }
 
-.dropdown-list a {
-  text-decoration: none;
-  /* background-color: var(--primary-color); */
+@media (max-width: 1122px) {
+  .dropdown {
+    right: 21%;
+  }
+}
+
+@media (max-width: 980px) {
+  .dropdown {
+    right: 23%;
+  }
+}
+
+@media (max-width: 910px) {
+  .dropdown {
+    right: 25%;
+  }
+}
+
+@media (max-width: 810px) {
+  .dropdown {
+    right: 28%;
+  }
+}
+
+@media (max-width: 770px) {
+  .dropdown {
+    right: 30%;
+  }
+}
+
+@media (max-width: 720px) {
+  .dropdown {
+    right: 32%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .dropdown {
+    top: 8%;
+  }
+}
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .dropdown {
+    top: 6%;
+  }
+}
+
+.dropdown_2 {
+  list-style: none;
   color: #fff;
   font-family: var(--font-family-2);
+  text-align: center;
+  padding: 10px 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  display: none;
+  cursor: pointer;
+}
+
+.dropdown_2-list {
+  padding: 10px;
+}
+
+.dropdown-list a {
+  text-decoration: none;
+  color: #fff;
+  font-family: var(--font-family-2);
+}
+.dropdown_2-list a {
+  text-decoration: none;
+  color: var(--primary-color);
 }
 .dropdown-list a:hover {
   color: var(--primary-color);
@@ -318,6 +391,12 @@ body {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
+}
+
+.dropdown_2.active {
+  opacity: 1;
+  visibility: visible;
+  display: block;
 }
 
 .dropdown > li {
@@ -413,7 +492,7 @@ body {
   /* position: absolute;
   right: 40%; */
   width: 7rem;
-  padding: 10px 20px;
+  padding: 10px;
   border-radius: 10px;
   border: none;
   background-color: #0c75ad;
@@ -500,12 +579,13 @@ body {
   .what_we_do-container {
     position: relative;
     z-index: -1;
-    height: 40rem;
-    width: 40rem;
+    height: 25rem;
+    width: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: 2px solid gray;
   }
 }
 
@@ -529,10 +609,9 @@ h2:hover {
 }
 .container2 {
   display: flex;
-  /* height: 30rem; */
   margin: 10px 20px;
   padding: 5px 10px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 .container2:not(:last-of-type) {
@@ -544,7 +623,7 @@ h2:hover {
   height: 70%;
   flex: 0.7; */
   height: 30rem;
-  width: 40rem;
+  width: 100%;
 }
 
 .our_service-image_container > img {
@@ -566,7 +645,7 @@ h2:hover {
   word-spacing: 2px;
   letter-spacing: 1px;
   line-height: 25px;
-  width: 40rem;
+  width: 100%;
 }
 
 .caption h3 {
@@ -718,11 +797,10 @@ footer p {
 /* Contact us*/
 .contact_us {
   width: 100%;
-  height: 50rem;
+  height: 100%;
   font-size: 2rem;
   position: relative;
-  min-height: 100vh;
-  padding: 50px 0;
+  min-height: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -731,6 +809,9 @@ footer p {
   color: var(--text-color-2);
   font-family: var(--font-family-3);
   border-top: 2px solid #878c9f;
+}
+.contact_margin-top {
+  margin-top: 45px;
 }
 
 .contact_us .content {
@@ -900,3 +981,12 @@ footer p {
     margin-bottom: 40px;
   }
 }
+
+/* @media (max-width: 812px) {
+  .front_page {
+    width: 200%;
+  }
+  .what_we_do-section {
+    width: 200%;
+  }
+} */

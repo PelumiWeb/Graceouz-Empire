@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../images/Image-1 (7).jpeg">
+
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
@@ -22,7 +24,8 @@
             <span></span>
         </div>
         <div class="logo">
-            <img src="../images/Image-1 (7).jpeg" alt="">
+            <a href=""><img src="./images/Image-1 (7).jpeg" alt=""></a>
+            
         </div>
         <nav class="header_navigation">
             <ul class="list">
@@ -57,20 +60,31 @@
          </ul>
         <nav class="navigation_2">
             <div class="nav_2 home">
-               <a href="./">home</a> 
+               <a href="../index.html">home</a> 
             </div>
             <div class="nav_2 home">
-               <a href="./About_us.html">About Us</a> 
+               <a href="../about.html">About Us</a> 
             </div>
-            <div class="nav_2 home">
-               <a href="#products">Products</a> 
-            </div>
-            <div class="nav_2 home">
-               <a href="#services">Services</a> 
-            </div>
-            <div class="nav_2 home">
-               <a href="./project.html">Projects</a> 
-            </div>
+            <div class="nav_2 home nav_services">
+                <a href="#">Services</a> 
+                <span id="chevron2" onclick="showDropDown2()"><a href="#"><i class="fas fa-chevron-down"></i></a></span>
+             </div>
+             <div class="dropdown-2-main">
+                 <ul class="dropdown_2">
+                     <li class="dropdown_2-list">
+                         <a href="./snacks.html">Snacks Production</a> 
+                     </li>
+                     <li class="dropdown_2-list">
+                         <a href="./eateries.html">Eateries</a>
+                        </li>
+                     <li class="dropdown_2-list">
+                         <a href="./investment.html">Investment</a>
+                     </li>
+                     <li class="dropdown_2-list">
+                         <a href="./dryCleaning.html">Dry Cleaning</a>
+                   </li>
+                 </ul>
+             </div>
             <div class="nav_2 contact">
                <a href="#contact">Contact Us</a> 
             </div>
@@ -79,7 +93,7 @@
           
     </div>
     <div class="image_container">
-        <img id="images" src="../images/New-imge-1 (5).jpg" alt="">
+        <img id="images" src="../images/Investment/markus-winkler-IrRbSND5EUc-unsplash.jpg" alt="">
     </div>
     <button class="get_started">
         <a href="">Get Started</a>
@@ -90,7 +104,7 @@
   
 
     <div class="services_information">
-        <h1>Dry Cleaning and Laudering Service</h1>  
+        <h1>Investments</h1>  
         <div class="information">
             <h4>How we take work from people</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nobis ducimus magni repellat tempore similique, nostrum eligendi soluta et officiis veniam laborum sunt unde, provident magnam voluptatem! Labore in ad, nesciunt architecto quo accusantium, soluta corporis quod, fugit natus sed iste. Exercitationem sunt amet cupiditate sit nemo nihil illo deleniti!</p>
@@ -108,7 +122,68 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nobis ducimus magni repellat tempore similique, nostrum eligendi soluta et officiis veniam laborum sunt unde, provident magnam voluptatem! Labore in ad, nesciunt architecto quo accusantium, soluta corporis quod, fugit natus sed iste. Exercitationem sunt amet cupiditate sit nemo nihil illo deleniti!</p>
         </div>
     </div>
-</section> nb
+</section> 
+
+<section class="contact_us" id="contact">
+    <div class="content">
+        <h2>Contact Us</h2>
+        <p>Kindly contact us through the following details</p>
+    </div>
+    <div class="container">
+        <div class="contactInfo">
+            <div class="box">
+                <div class="icon">
+                    <i class="fa fa-map" aria-hidden="true"></i>
+                </div>
+                <div class="text">
+                    <h2 class="header_contact">Address</h2>
+                    <p>Your office address</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                </div>
+                <div class="text">
+                    <h2 class="header_contact">Phone</h2>
+                    <p>+234809696235</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fa fa-envelope" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h2 class="header_contact">Email</h2>
+                    <p>paintpotltd@outlook.com</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fab fa-instagram"></i></div>
+                <div class="text">
+                    <h2 class="header_contact">Instagram</h2>
+                    <p>@paintpotltd</p>
+                </div>
+            </div>
+            </div>
+            <div class="contact-form">
+                <form action="">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" id="Email" required>
+                        <label for="Email">Enter Your Full Name</label> 
+                    <div class="inputBox">
+                        <input type="text" name="" id="Email"  required>
+                        <label for="Email">Enter email</label>                    
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span class="span_input">Type your message...</span>
+                        <button type="submit" class="submit_form">submit</button>
+                     
+                </form>
+            </div>
+        </section>
 
     <footer>
         <div class="footer_elem footer_contact-us">
@@ -181,6 +256,34 @@
         </div>
     </footer>
 </div>
+<script>
+    const images = document.getElementById('images')
+    const arrayOfImages = ["../images/Investment/mark-oflynn-RQfcT2FD7_E-unsplash.jpg","../images/Investment/alexander-mils-lCPhGxs7pww-unsplash.jpg"]
+    
+    let num = 0;
+        const next = () => {
+            const image = document.getElementById('images')
+            num++;
+            if (num >= arrayOfImages.length) {
+                num = 0
+            }
+            image.src = arrayOfImages[num]
+        }
+    
+        setInterval(next, 5000)
+    
+    
+        const prev = () => {
+            const slider = document.getElementById('images');
+            num--;
+            if (num < 0) {
+                num = arrayOfImages.length-1
+            }
+            image.src = arrayOfImages[num]
+        }
+       
+    
+        </script> 
     <script src="../index.js"></script>
     
 </body>

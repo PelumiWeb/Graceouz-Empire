@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Graceouz Empire</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./images/Image-1 (7).jpeg">
+
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
     crossorigin="anonymous"
+    
   />
 </head>
 <body>
@@ -22,19 +25,20 @@
             <span></span>
         </div>
         <div class="logo">
-            <img src="./images/Image-1 (7).jpeg" alt="">
+            <a href=""><img src="./images/Image-1 (7).jpeg" alt=""></a>
+            
         </div>
         <nav class="header_navigation">
             <ul class="list">
                 <li class="lists">
-                    <a href="../index.html">Home</a>
+                    <a href="./index.html">Home</a>
                 </li>
                 <li class="lists">
                   <a href="#">Our Service</a>
                    <span id="chevron" onclick="showDropDown()"><a href="#"><i class="fas fa-chevron-down"></i></a></span>
                 </li>
                 <li class="lists">
-                    <a href="">About</a>
+                    <a href="#">About</a>
                 </li>
                 <li class="lists list list-contact-us">
                     <a href="">Contact Us</a>
@@ -62,15 +66,26 @@
             <div class="nav_2 home">
                <a href="./About_us.html">About Us</a> 
             </div>
-            <div class="nav_2 home">
-               <a href="#products">Products</a> 
-            </div>
-            <div class="nav_2 home">
-               <a href="#services">Services</a> 
-            </div>
-            <div class="nav_2 home">
-               <a href="./project.html">Projects</a> 
-            </div>
+            <div class="nav_2 home nav_services">
+                <a href="#">Services</a> 
+                <span id="chevron2" onclick="showDropDown2()"><a href="#"><i class="fas fa-chevron-down"></i></a></span>
+             </div>
+             <div class="dropdown-2-main">
+                 <ul class="dropdown_2">
+                     <li class="dropdown_2-list">
+                         <a href="./services/snacks.html">Snacks Production</a> 
+                     </li>
+                     <li class="dropdown_2-list">
+                         <a href="./services/eateries.html">Eateries</a>
+                        </li>
+                     <li class="dropdown_2-list">
+                         <a href="./services/investment.html">Investment</a>
+                     </li>
+                     <li class="dropdown_2-list">
+                         <a href="./services/dryCleaning.html">Dry Cleaning</a>
+                   </li>
+                 </ul>
+             </div>
             <div class="nav_2 contact">
                <a href="#contact">Contact Us</a> 
             </div>
@@ -79,8 +94,7 @@
           
     </div>
     <div class="image_container">
-        <img id="images" src="./images/Dry Cleaning/New-imge-1 (1).jpg" alt="">
-    </div>
+        <img id="images" src="./images/about_us.jpg" >
     <button class="get_started">
         <a href="">Get Started</a>
     </button>

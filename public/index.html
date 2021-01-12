@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graceous Empire</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/Image-1 (7).jpeg">
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
@@ -13,12 +14,12 @@
 />
 </head>
 <body>
-    <section class="front_page">
+    <section>
+        <div class="front_page">
         <div class="intro_text">
             <h1>Graceous Empire </h1>
             <p>We care for you...</p>
         </div>
-    
         <div class="header">
             <div class="menu">
                 <span></span>
@@ -26,7 +27,8 @@
                 <span></span>
             </div>
             <div class="logo">
-                <img src="./images/Image-1 (7).jpeg" alt="">
+                <a href=""><img src="./images/Image-1 (7).jpeg" alt=""></a>
+                
             </div>
             <nav class="header_navigation">
                 <ul class="list">
@@ -66,8 +68,25 @@
                 <div class="nav_2 home">
                    <a href="./about.html">About Us</a> 
                 </div>
-                <div class="nav_2 home">
-                   <a href="#services">Services</a> 
+                <div class="nav_2 home nav_services">
+                   <a href="#">Services</a> 
+                   <span id="chevron2" onclick="showDropDown2()"><a href="#"><i class="fas fa-chevron-down"></i></a></span>
+                </div>
+                <div class="dropdown-2-main">
+                    <ul class="dropdown_2">
+                        <li class="dropdown_2-list">
+                            <a href="./services/snacks.html">Snacks Production</a> 
+                        </li>
+                        <li class="dropdown_2-list">
+                            <a href="./services/eateries.html">Eateries</a>
+                           </li>
+                        <li class="dropdown_2-list">
+                            <a href="./services/investment.html">Investment</a>
+                        </li>
+                        <li class="dropdown_2-list">
+                            <a href="./services/dryCleaning.html">Dry Cleaning</a>
+                      </li>
+                    </ul>
                 </div>
                 <div class="nav_2 contact">
                    <a href="#contact">Contact Us</a> 
@@ -87,16 +106,17 @@
     </div>
 
         <div class="image_container">
-            <img id="images" src="./images/New-imge-1 (5).jpg" alt="">
+            <img id="images" src="./images/empire.jpg" alt="">
         </div>
   <button class="get_started">
       <a href="">Get Started</a>
   </button>
+</div>
 </section>
 <section class="what_we_do-section">
     <h2>What we do</h2>
     <div class="what_we_do">
-    <div class="what_we_do-container margin-right margin-bottom">
+    <div class="what_we_do-container">
         <div class="container-what_we-do">
             <img src="./svg/undraw_Hamburger_8ge6.svg" alt="">
         </div>
@@ -107,7 +127,7 @@
         </button>  
       
     </div>
-    <div class="what_we_do-container margin-bottom">
+    <div class="what_we_do-container">
     <div class="container-what_we-do">
         <img src="./svg/undraw_eating_together_tjhx.svg" alt="">
     </div>
@@ -117,7 +137,7 @@
         <a href="">Get Started</a>
     </button>  
 </div>
-<div class="what_we_do-container margin-right">
+<div class="what_we_do-container ">
     <div class="container-what_we-do">
         <img src="./svg/undraw_clean_up_ucm0.svg" alt="">
     </div>
@@ -191,10 +211,67 @@
     <a href="">Read More</a>
 </Button>
 </section>
-<!-- 
-<div class="map_induces">
-<iframe src="https://mapbox-project.netlify.app" style="overflow-y:scroll; border: 0px" height="560" width="100%" allowfullscreen="" frameborder="0"></iframe>
-</div> -->
+
+<section class="contact_us contact_margin-top" id="contact">
+    <div class="content">
+        <h2>Contact Us</h2>
+        <p>Kindly contact us through the following details</p>
+    </div>
+    <div class="container">
+        <div class="contactInfo">
+            <div class="box">
+                <div class="icon">
+                    <i class="fa fa-map" aria-hidden="true"></i>
+                </div>
+                <div class="text">
+                    <h2 class="header_contact">Address</h2>
+                    <p>Your office address</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                </div>
+                <div class="text">
+                    <h2 class="header_contact">Phone</h2>
+                    <p>+234809696235</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fa fa-envelope" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h2 class="header_contact">Email</h2>
+                    <p>paintpotltd@outlook.com</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fab fa-instagram"></i></div>
+                <div class="text">
+                    <h2 class="header_contact">Instagram</h2>
+                    <p>@paintpotltd</p>
+                </div>
+            </div>
+            </div>
+            <div class="contact-form">
+                <form action="">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" id="Email" required>
+                        <label for="Email">Enter Your Full Name</label> 
+                    <div class="inputBox">
+                        <input type="text" name="" id="Email"  required>
+                        <label for="Email">Enter email</label>                    
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span class="span_input">Type your message...</span>
+                        <button type="submit" class="submit_form">submit</button>
+                     
+                </form>
+            </div>
+        </section>
 <footer>
     <div class="footer_elem footer_contact-us">
         <div class="footer_contact-us-header footer_header">
